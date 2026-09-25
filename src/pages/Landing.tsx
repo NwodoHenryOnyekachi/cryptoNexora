@@ -265,13 +265,13 @@ export default function Landing() {
     else openModal('login', '/wallet');
   };
   return (
-    <div style={{ background: '#050505', minHeight: '100vh', overflow: 'hidden', width: '100%', maxWidth: '100vw' }}>
+    <div style={{ background: '#050505', minHeight: '100vh', overflow: 'clip', width: '100%', maxWidth: '100vw', contain: 'paint' }}>
       {/* Hero */}
-      <section style={{ position: 'relative', padding: '0 0 60px', overflow: 'hidden', width: '100%', maxWidth: '100vw' }}>
+      <section style={{ position: 'relative', padding: '0 0 60px', overflow: 'clip', width: '100%', maxWidth: '100vw', contain: 'paint' }}>
         {/* Ambient orbs + grid */}
-        <div className="orb drift" style={{ width: 460, height: 460, top: -140, left: '4%', background: 'rgba(139,92,246,0.32)' }} />
-        <div className="orb drift" style={{ width: 380, height: 380, top: -60, right: '2%', background: 'rgba(59,107,255,0.28)', animationDelay: '2s' }} />
-        <div className="orb pulse-glow" style={{ width: 260, height: 260, top: 340, left: '46%', background: 'rgba(34,229,229,0.18)' }} />
+        <div className="orb drift" style={{ width: 'min(460px, 55vw)', height: 'min(460px, 55vw)', top: -140, left: '4%', background: 'rgba(139,92,246,0.32)' }} />
+        <div className="orb drift" style={{ width: 'min(380px, 45vw)', height: 'min(380px, 45vw)', top: -60, right: '2%', background: 'rgba(59,107,255,0.28)', animationDelay: '2s' }} />
+        <div className="orb pulse-glow" style={{ width: 'min(260px, 40vw)', height: 'min(260px, 40vw)', top: 340, left: '46%', background: 'rgba(34,229,229,0.18)' }} />
         <div className="noise-grid" style={{ position: 'absolute', inset: '0 0 auto 0', height: 620, zIndex: 0 }} />
 
         <div className="hero-grid" style={{ maxWidth: 1280, margin: '0 auto', padding: '96px 24px 100px', position: 'relative', zIndex: 1 }}>
@@ -398,8 +398,8 @@ export default function Landing() {
       </section>
 
       {/* Features */}
-      <section style={{ maxWidth: 1280, margin: '0 auto', padding: '110px 24px', position: 'relative' }}>
-        <div className="orb" style={{ width: 500, height: 500, top: '10%', right: '-10%', background: 'rgba(59,107,255,0.10)' }} />
+      <section style={{ maxWidth: 1280, margin: '0 auto', padding: '110px 24px', position: 'relative', overflow: 'clip' }}>
+        <div className="orb" style={{ width: 'min(500px, 60vw)', height: 'min(500px, 60vw)', top: '10%', right: '-10%', background: 'rgba(59,107,255,0.10)' }} />
         <Reveal variant="up">
           <div style={{ textAlign: 'center', marginBottom: 64, position: 'relative', zIndex: 1 }}>
             <h2 className="font-display" style={{ fontSize: 'clamp(32px, 4vw, 46px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#f4f5f9', margin: '0 0 16px' }}>
@@ -438,7 +438,7 @@ export default function Landing() {
             border: '1px solid rgba(139,92,246,0.28)', borderRadius: 28, padding: '76px 48px', textAlign: 'center',
             position: 'relative', overflow: 'hidden',
           }}>
-            <div className="orb pulse-glow" style={{ width: 320, height: 320, top: -120, left: '50%', transform: 'translateX(-50%)', background: 'rgba(34,229,229,0.22)' }} />
+            <div className="orb pulse-glow" style={{ width: 'min(320px, 60vw)', height: 'min(320px, 60vw)', top: -120, left: '50%', transform: 'translateX(-50%)', background: 'rgba(34,229,229,0.22)' }} />
             <div style={{ position: 'relative', zIndex: 1 }}>
               <h2 className="font-display" style={{ fontSize: 'clamp(30px, 4.2vw, 50px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#f4f5f9', margin: '0 0 16px' }}>
                 Your assets. Your future.<br />One intelligent platform.
